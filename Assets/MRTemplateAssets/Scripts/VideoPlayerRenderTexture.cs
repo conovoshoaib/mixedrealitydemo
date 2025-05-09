@@ -27,7 +27,7 @@ namespace UnityEngine.XR.Templates.MR
             } */
 
             // Fallback for the built-in render pipeline
-            return "Mobile/Particles/Alpha Blended";
+            return "Graph Shader/ChromaKeyShader";
         }
 
         [SerializeField, Tooltip("The target Renderer which will display the video.")]

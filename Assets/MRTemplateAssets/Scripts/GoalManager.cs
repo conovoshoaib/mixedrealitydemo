@@ -343,8 +343,8 @@ namespace UnityEngine.XR.Templates.MR
 
             TurnOnVideoPlayer();
 
-            if (m_VideoPlayerToggle != null)
-                m_VideoPlayerToggle.isOn = true;
+           /*  if (m_VideoPlayerToggle != null)
+                m_VideoPlayerToggle.isOn = true; */
 
             if (m_FadeMaterial != null)
             {
@@ -429,7 +429,8 @@ namespace UnityEngine.XR.Templates.MR
 
         public void TooglePlayer(bool visibility)
         {
-            if (visibility)
+             m_VideoPlayer.SetActive(visibility);
+            /* if (visibility)
             {
                 TurnOnVideoPlayer();
             }
@@ -441,7 +442,7 @@ namespace UnityEngine.XR.Templates.MR
                     if (m_VideoPlayerToggle.isOn)
                         m_VideoPlayerToggle.isOn = false;
                 }
-            }
+            } */
         }
 
         void TurnOnVideoPlayer()
@@ -488,7 +489,7 @@ namespace UnityEngine.XR.Templates.MR
             pos.y = 0f;
             m_VideoPlayer.transform.position = pos;
             
-            m_VideoPlayer.SetActive(true);
+           // m_VideoPlayer.SetActive(true);
             if (follow != null)
                 follow.rotationFollowMode = LazyFollow.RotationFollowMode.LookAtWithWorldUp;
         }

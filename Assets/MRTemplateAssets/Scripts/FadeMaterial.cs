@@ -14,10 +14,11 @@ namespace UnityEngine.XR.Templates.MR
 
         public void FadeSkybox(bool visible)
         {
-            if (m_FadeCoroutine != null)
+            Environment.SetActive(visible);
+         /*    if (m_FadeCoroutine != null)
                 StopCoroutine(m_FadeCoroutine);
 
-            m_FadeCoroutine = StartCoroutine(Fade(visible));
+            m_FadeCoroutine = StartCoroutine(Fade(visible)); */
         }
 
         //Fade Coroutine
