@@ -123,7 +123,7 @@ namespace UnityEngine.XR.Templates.MR
 
             if (m_FadeMaterial != null)
             {
-                m_FadeMaterial.FadeSkybox(false);
+              //  m_FadeMaterial.FadeSkybox(false);
 
                 if (m_PassthroughToggle != null)
                     m_PassthroughToggle.isOn = false;
@@ -245,8 +245,8 @@ namespace UnityEngine.XR.Templates.MR
 
             if (m_CurrentGoal.CurrentGoal == OnboardingGoals.FindSurfaces)
             {
-                if (m_FadeMaterial != null)
-                    m_FadeMaterial.FadeSkybox(true);
+               /*  if (m_FadeMaterial != null)
+                    m_FadeMaterial.FadeSkybox(false); */
 
                 if (m_PassthroughToggle != null)
                     m_PassthroughToggle.isOn = true;
@@ -341,14 +341,14 @@ namespace UnityEngine.XR.Templates.MR
         {
             m_CoachingUIParent.transform.localScale = Vector3.zero;
 
-            TurnOnVideoPlayer();
+          //  TurnOnVideoPlayer();
 
             if (m_VideoPlayerToggle != null)
                 m_VideoPlayerToggle.isOn = true;
 
             if (m_FadeMaterial != null)
             {
-                m_FadeMaterial.FadeSkybox(true);
+              //  m_FadeMaterial.FadeSkybox(false);
 
                 if (m_PassthroughToggle != null)
                     m_PassthroughToggle.isOn = true;
@@ -365,6 +365,8 @@ namespace UnityEngine.XR.Templates.MR
             }
 
             StartCoroutine(TurnOnARFeatures());
+             m_VideoPlayer.SetActive(false);
+            m_FadeMaterial.FadeSkybox(false);
         }
 
         public void ResetCoaching()
