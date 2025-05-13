@@ -249,7 +249,7 @@ namespace UnityEngine.XR.Templates.MR
                     m_FadeMaterial.FadeSkybox(false); */
 
                 if (m_PassthroughToggle != null)
-                    m_PassthroughToggle.isOn = true;
+                    m_PassthroughToggle.isOn = false;
 
                 if (m_LearnButton != null)
                 {
@@ -344,14 +344,14 @@ namespace UnityEngine.XR.Templates.MR
           //  TurnOnVideoPlayer();
 
             if (m_VideoPlayerToggle != null)
-                m_VideoPlayerToggle.isOn = true;
+                m_VideoPlayerToggle.isOn = false;
 
             if (m_FadeMaterial != null)
             {
               //  m_FadeMaterial.FadeSkybox(false);
 
                 if (m_PassthroughToggle != null)
-                    m_PassthroughToggle.isOn = true;
+                    m_PassthroughToggle.isOn = false;
             }
 
             if (m_LearnButton != null)
